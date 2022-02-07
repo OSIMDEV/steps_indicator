@@ -59,8 +59,15 @@ class StepsIndicator extends StatefulWidget {
   /// Selected step border size [default = 14]
   final double selectedStepBorderSize;
 
+  /// Selected step padding size [default = 0]
+  final double selectedStepPaddingSize;
+
   /// Unselected step border size [default = 14]
   final double unselectedStepBorderSize;
+
+  /// Selected step padding size [default = 0]
+  final double unselectedStepPaddingSize;
+
   final Widget? doneStepWidget;
   final Widget? unselectedStepWidget;
   final Widget? selectedStepWidget;
@@ -90,7 +97,9 @@ class StepsIndicator extends StatefulWidget {
       this.unselectedStepSize = 10,
       this.selectedStepSize = 14,
       this.selectedStepBorderSize = 1,
+      this.selectedStepPaddingSize = 0,
       this.unselectedStepBorderSize = 1,
+      this.unselectedStepPaddingSize = 0,
       this.doneStepWidget,
       this.unselectedStepWidget,
       this.selectedStepWidget,
@@ -329,7 +338,8 @@ class _StepsIndicatorState extends State<StepsIndicator>
                     colorIn: widget.unselectedStepColorIn,
                     colorOut: widget.unselectedStepColorOut,
                     stepSize: widget.unselectedStepSize,
-                    borderSize: widget.unselectedStepBorderSize),
+                    borderSize: widget.unselectedStepBorderSize,
+                    paddingSize: widget.unselectedStepPaddingSize),
           );
         },
       );
@@ -340,7 +350,8 @@ class _StepsIndicatorState extends State<StepsIndicator>
             colorIn: widget.unselectedStepColorIn,
             colorOut: widget.unselectedStepColorOut,
             stepSize: widget.unselectedStepSize,
-            borderSize: widget.unselectedStepBorderSize);
+            borderSize: widget.unselectedStepBorderSize,
+            paddingSize: widget.unselectedStepPaddingSize);
   }
 
   /// A function to return the selected step widget
@@ -365,7 +376,8 @@ class _StepsIndicatorState extends State<StepsIndicator>
                     colorIn: widget.selectedStepColorIn,
                     colorOut: widget.selectedStepColorOut,
                     stepSize: widget.selectedStepSize,
-                    borderSize: widget.selectedStepBorderSize),
+                    borderSize: widget.selectedStepBorderSize,
+                    paddingSize: widget.selectedStepPaddingSize),
           );
         },
       );
@@ -376,7 +388,8 @@ class _StepsIndicatorState extends State<StepsIndicator>
             colorIn: widget.selectedStepColorIn,
             colorOut: widget.selectedStepColorOut,
             stepSize: widget.selectedStepSize,
-            borderSize: widget.selectedStepBorderSize);
+            borderSize: widget.selectedStepBorderSize,
+            paddingSize: widget.selectedStepPaddingSize);
   }
 
   /// A function to return the done step widget
