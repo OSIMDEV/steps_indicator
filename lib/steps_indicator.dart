@@ -430,7 +430,7 @@ class _StepsIndicatorState extends State<StepsIndicator>
       child: CustomPaint(
         painter: LinearPainter(
           progress: widget.selectedStep == i + 1 && widget.enableLineAnimation
-              ? _percentToNext
+              ? _percentToNext + 1
               : 1,
           progressColor: widget.doneLineColor,
           backgroundColor: widget.undoneLineColor,
