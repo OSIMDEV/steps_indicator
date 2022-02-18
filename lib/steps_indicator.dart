@@ -186,7 +186,7 @@ class _StepsIndicatorState extends State<StepsIndicator>
                 parent: _animationControllerToNext, curve: Curves.linear),
           )..addListener(() {
               setState(() {
-                _percentToNext = _animationToNext.value;
+                _percentToNext = _animationToNext.value - 1;
               });
             });
           _animationControllerToNext.forward();
